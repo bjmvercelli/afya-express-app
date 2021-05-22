@@ -8,6 +8,6 @@ const LoginMiddleware = require('../middlewares/login');
 router.get('/', LoginController.index); //aqui chamamos o controller de login método index
 router.post('/logar', LoginController.logar);
 router.get('/logout', LoginController.logout);
-router.get('/home',LoginMiddleware ,HomeController.index ); //antes de chamar o home, passa pro middlerare, depois vai pra ação
+router.get('/home', LoginMiddleware ,HomeController.index ); //antes de chamar o home, passa pro middlerare, depois vai pra ação
 
 module.exports = router;
